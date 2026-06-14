@@ -2,7 +2,7 @@ import minigraph as nx
 
 def build_graph(edges_list, num_nodes, num_edges):
 
-    graph = nx.DiGraph()
+    graph = nx.Graph()
 
     for node in range(1, num_nodes + 1):
         graph.add_node(node)

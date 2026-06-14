@@ -6,16 +6,18 @@ Escribe el código en Python que calcule la suma de todos los números de dos d�
 
 ### Ejemplo
 #### Entrada
+```
 two1nine
-
 abcone2cdthreexyz
-
 xtwone3fo
-
 treb7uchzoneet
+```
 
 #### Salida
 Los números de dos dígitos de estas 4 líneas son: 29, 13, 23, 71. Por tanto, el resultado que debe generar el programa es la suma de estos 4 números: 19 + 13 + 23 + 71 = 136
+```
+136
+```
 
 ## ================= NOTAS =================
 En la solución de este ejercicio, se destaca el uso de la función ``startswith()`` de Python para comprobar si un elemento dado comienza por otro elemento propuesto.
