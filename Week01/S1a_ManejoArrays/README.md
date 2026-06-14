@@ -18,3 +18,8 @@ Por ejemplo, dada la siguiente entrada:
 
 Salida esperada:
 **[4, 5, 6, 7, 8, 9, 2, 12, 1, 10, 11, 3]**
+
+## ================= NOTAS =================
+En la solución de este ejercicio, se destaca el uso una operación sencilla con el módulo de un número. Esto se emplea con el fin de crear un bucle en el que se recorra una lista de elementos donde, cuando se llegue al final, se vuelva a coger el primer elemento de la lista:
+
+``child_index = (child_index + 1) % n``
