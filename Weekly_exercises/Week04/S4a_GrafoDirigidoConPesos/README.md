@@ -1,4 +1,4 @@
-# Semana 3a - Grafo dirigido con pesos
+# Semana 4a - Grafo dirigido con pesos
 ## ================= ENUNCIADO =================
 Se debe crear un grafo dirigido con pesos utilizando _MiniGraph_. Las principales funciones a utilizar son:
 ```
