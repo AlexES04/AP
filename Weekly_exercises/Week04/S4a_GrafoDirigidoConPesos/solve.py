@@ -1,11 +1,13 @@
-import minigraph as nx
+import os
+import sys
+
+actual_dir = os.path.dirname(os.path.abspath(__file__))
+week04_dir = os.path.dirname(actual_dir)
+sys.path.append(week04_dir)
+
+import utils.minigraph as nx
 
 def build_digraph_with_weights(edges_list, num_nodes, num_edges):
-    """ 
-    Build the corresponding directed graph with weights. Nodes
-    numbering starts with number 1 (that is, nodes are 1,2,3,...)
-    """
-
     graph = nx.DiGraph()
 
     for node in range(1, num_nodes + 1):

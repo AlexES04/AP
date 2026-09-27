@@ -8,10 +8,11 @@ sys.path.append(week04_dir)
 from utils.utils import *
 
 test_file = os.path.join(actual_dir, "test.txt")
-input_source = open_test_file(test_file)
-
+input_source = open_test_file (test_file)
+    
 # ----------------------------------------------------------------
 import utils.minigraph as nx
+from utils.graph_utils import *
 from solve import *
 
 first_line = get_line(input_source).split()
@@ -21,13 +22,18 @@ edges_list = get_n_lines(input_source, num_edges)
 
 graph = build_digraph_with_weights(edges_list, num_nodes, num_edges)
 
-print("Number of nodes: " + str(graph.number_of_nodes()))
-print("Nodes: ", graph.nodes())
-print("Number of edges: " + str(graph.number_of_edges()))
-print("Edges: ", graph.edges(data=True))
+print("============ ITERATIVE ============")
+iterative_solution = dfs_topological_sort_iterative(graph)
+d_swap = {v: k for k, v in iterative_solution.items()}
+print(dict(sorted(d_swap.items())))
+
+print("============ RECURSIVE ============")
+recursive_solution = dfs_topological_sort_recursive(graph)
+d_swap = {v: k for k, v in recursive_solution.items()}
+print(dict(sorted(d_swap.items())))
 
 
 # --------------------------------------------------------------------
-# Close the file if it was opened
-if test_file is not None:
-    input_source.close()
+# Cerramos el fichero (si lo utilizamos para redireccionar la entrada)
+
+close_test_file(test_file, input_source)

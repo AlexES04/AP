@@ -10,7 +10,7 @@ def fibonacci_memo(n, memoria=None):
 
     result = fibonacci_memo(n-1, memoria) + fibonacci_memo(n-2, memoria)
 
-    memoria [n] = result
+    memoria[n] = result
     return result
 
 def fibonacci_tab(n):

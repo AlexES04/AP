@@ -4,11 +4,11 @@ def solve_brute_force(numbers, target):
     operations = 0  
 
     for i in range(n):
-        for j in range(i+1, n):
+        for j in range(i, n):
             operations += 1
 
-            if (numbers[i] + numbers[j]) == 9:
+            if (numbers[i] + numbers[j]) == target:
                 solutions.append((numbers[i], numbers[j]))
 
-    print(f"Search completed. Number of operations: {operations}")
+    print(f"Search completed. \nTarget: {target}\nNumber of operations: {operations}")
     return solutions

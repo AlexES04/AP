@@ -1,4 +1,4 @@
-import minigraph as nx
+import utils.minigraph as nx
 
 def build_digraph_with_weights(edges_list, num_nodes, num_edges):
     graph = nx.DiGraph()
